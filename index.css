@@ -1,0 +1,238 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.menu a {
+    color: silver;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.menu a:hover {
+    background-color: silver;
+    color: black;
+}
+
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.product {
+    text-align: center;
+    padding: 10px;
+}
+
+.product img {
+    width: 100%;
+    max-width: 160px;
+}
+
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header td {
+    width: 20%;
+    text-align: center;
+    color: silver;
+}
+
+hr {
+    border: 1px solid black;
+    width: 80%;
+    margin: 0 ;
+}
+
+nav {
+    margin: 0px;
+}
+
+header td:hover {
+    background-color: silver;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    line-height: 0;
+}
+
+header table {
+    width: 80%;
+    margin-left: 10%;
+}
+
+nav {
+    padding: 0px;
+    text-align: center;
+}
+
+body {
+    background-color: red;
+    font-family: Trattattello, cursive;
+    overflow-x: hidden;
+    min-height: 150vh;
+    background-image: 
+        linear-gradient(to right,
+            red 0%,
+            red 5%,
+            transparent 90%),
+        url(img/fondo.png);
+    background-repeat: 
+        no-repeat;
+        no-repeat;
+    background-position: right top;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.padded-right {
+    padding-right: 10%;
+    padding-left: 30px;
+}
+
+#bottom {
+    background-color: red;
+
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    margin: 0px;
+}
+
+.album-cover {
+    width: 100px;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.silver-centered {
+    color: silver;
+    text-align: center;}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 50px);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 40px);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 3vw, 30px);
+}
+
+h4 {
+    font-size: clamp(1rem, 2vw, 20px);
+    text-align: center;
+}
+
+hr {
+    border: 1px solid black;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.centro {
+    text-align: center;
+}
+
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.merch-table td:hover{
+    background-color: red;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+p {
+    padding: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.headline {
+    font-weight: bold;
+    font-size: 20px;
+    color: silver
+}
+
+.headline-centered {
+    font-weight: bold;
+    font-size: 25px;
+    color: silver;
+    list-style-type: none;
+    text-align: center;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.silver {
+    color: silver;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        background-size: cover;
+    }
+
+    .padded-right {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    .headline-centered {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
