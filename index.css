@@ -1,3 +1,174 @@
+/* ==============================
+    COLORS
+================================*/
+
+
+/* BASIC */
+:root {
+    --bg-main: red;
+    --text-main: black;
+    --text-light: silver;
+    --hover-bg: silver;
+    --hover-text: black;
+}
+
+/* BLOOD GOTHIC */
+/*
+:root {
+    --bg-main: #2a0000;
+    --text-main: #d8d0d0;
+    --text-light: #d8d0d0;
+    --hover-bg: #d8d0d0;
+    --hover-text: #111111;
+}
+*/
+
+/* ==============================
+    RESET
+================================*/
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* ==============================
+    BODY / GLOBAL
+================================*/
+
+body {
+    background-color: var(--bg-main);
+    font-family: Cormorant Garamond, serif;
+    background-image: 
+        linear-gradient(to right,
+            var(--bg-main) 0%,
+            var(--bg-main) 5%,
+            transparent 90%),
+        /*linear-gradient(
+            to right,
+            rgba(18,0,0,0.95) 0%,
+            rgba(18,0,0,0.8) 35%,
+            rgba(18,0,0,0.4) 70%,
+            rgba(18,0,0,0.2) 100%
+        ),*/
+        url(img/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    padding: 20px 0;
+}
+
+/* ==============================
+    TYPOGRAPHY
+================================*/
+
+h1 {
+    font-family: Cormorant SC, serif;
+    color: #d8d0d0;
+    text-align: center;
+    margin: 0px;
+    font-size: clamp(2rem, 5vw, 50px);
+    letter-spacing: 4px;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 40px);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 3vw, 30px);
+    letter-spacing: 1px;
+}
+
+h4 {
+    font-family: Tangerine, cursive;
+    font-size: clamp(1.5rem, 3vw, 32px);
+    text-align: center;
+}
+
+p {
+    padding: 10px;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+.headline {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--text-light)
+}
+
+.headline-centered {
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--text-light);
+    list-style-type: none;
+    text-align: center;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.silver {
+    color: var(--text-light);
+}
+
+.silver-centered {
+    color: var(--text-light);
+    text-align: center;
+}
+
+.centro {
+    text-align: center;
+}
+
+/* ==============================
+    HEADER
+================================*/
+
+header {
+
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    line-height: 0;
+}
+
+hr {
+    border: 1px solid black;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* ==============================
+    NAVIGATION
+================================*/
+
+nav {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
 .menu {
     display: flex;
     justify-content: center;
@@ -7,15 +178,44 @@
 }
 
 .menu a {
-    color: silver;
+    color: var(--text-light);
     text-decoration: none;
     padding: 10px 15px;
+    transition: 0.3s ease;
+    border-radius: 4px;
 }
 
 .menu a:hover {
-    background-color: silver;
-    color: black;
+    background-color: var(--hover-bg);
+    color: var(--hover-text);
+
 }
+
+/* ==============================
+    CONTENT / LAYOUT
+================================*/
+
+.padded-right {
+    padding-right: 10%;
+    padding-left: 30px;
+}
+
+.album-cover {
+    width: 100px;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==============================
+    MERCH  STORE
+================================*/
 
 .merch-grid {
     display: grid;
@@ -27,119 +227,22 @@
 
 .product {
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 .product img {
     width: 100%;
-    max-width: 160px;
+    max-width: 220px;
+    transition: transform 0.3s ease;
+    border-radius: 4px;
+}
+.product img:hover {
+    transform: scale(1.05);
 }
 
-html, body {
-    margin: 0px;
-    padding: 0px;
-}
-
-hr {
-    border: 1px solid black;
-    width: 80%;
-    margin: 20px auto;
-}
-
-nav {
-    margin: 0px;
-}
-
-header img {
-    width: 100px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    line-height: 0;
-}
-
-nav {
-    padding: 0px;
-    text-align: center;
-}
-
-body {
-    background-color: red;
-    /*font-family: Trattattello, cursive;*/
-    font-family: Cormorant Garamond, serif;
-    min-height: 150vh;
-    background-image: 
-        linear-gradient(to right,
-            red 0%,
-            red 5%,
-            transparent 90%),
-        url(img/fondo.png);
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: cover;
-    background-position: center;
-}
-
-
-.padded-right {
-    padding-right: 10%;
-    padding-left: 30px;
-}
-
-#bottom {
-    background-color: red;
-
-}
-
-h1 {
-    font-family: Cormorant SC, serif;
-    color: black;
-    text-align: center;
-    margin: 0px;
-}
-
-.album-cover {
-    width: 100px;
-    max-width: 200px;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-}
-
-.silver-centered {
-    color: silver;
-    text-align: center;}
-
-h1 {
-    font-size: clamp(2rem, 5vw, 50px);
-}
-
-h2 {
-    font-size: clamp(1.5rem, 4vw, 40px);
-}
-
-h3 {
-    font-size: clamp(1.2rem, 3vw, 30px);
-}
-
-h4 {
-    font-family: Tangerine, cursive;
-    font-size: clamp(1rem, 2vw, 20px);
-    text-align: center;
-}
-
-.centro {
-    text-align: center;
-}
-
-p {
-    padding: 10px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
+/* ==============================
+    FOOTER
+================================*/
 
 footer {
     text-align: center;
@@ -147,34 +250,15 @@ footer {
     margin-top: 20px;
 }
 
-.headline {
-    font-weight: bold;
-    font-size: 20px;
-    color: silver
-}
-
-.headline-centered {
-    font-weight: bold;
-    font-size: 25px;
-    color: silver;
-    list-style-type: none;
-    text-align: center;
-    margin-left: 0;
-    padding-left: 0;
-}
-
-.silver {
-    color: silver;
-}
-
-ul {
-    list-style-position: inside;
-}
+/* ==============================
+    MEDIA QUERIES
+================================*/
 
 @media (max-width: 768px) {
 
     body {
-        background-size: cover;
+        background-size: auto 110%;
+        background-position: 62% 100%;
     }
 
     .padded-right {
@@ -196,6 +280,3 @@ ul {
     }
 }
 
-* {
-    box-sizing: border-box;
-}
