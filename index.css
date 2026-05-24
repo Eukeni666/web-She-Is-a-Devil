@@ -40,6 +40,10 @@ html, body {
     padding: 0px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* ==============================
     BODY / GLOBAL
 ================================*/
@@ -169,6 +173,7 @@ header img {
     display: block;
     margin: 0 auto;
     line-height: 0;
+    transition: transform 0.5s ease;
 }
 
 
@@ -199,12 +204,27 @@ nav {
         background-color 0.3s ease,
         color 0.3s ease;
     border-radius: 4px;
+    position: relative;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    bottom: 5px;
+    width: 0%;
+    height: 1px;
+    background-color: var(--text-light);
+    transition: transform 0.3s ease;
 }
 
 .menu a:hover {
     background-color: var(--hover-bg);
     color: var(--hover-text);
+}
 
+.menu a:hover::after {
+    width: calc(100% - 30px);
 }
 
 /* ==============================
